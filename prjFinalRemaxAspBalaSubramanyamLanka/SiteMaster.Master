@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMaster.master.cs" Inherits="prjFinalRemaxAspBalaSubramanyamLanka.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Css/main.css" rel="stylesheet" />
+    <link href="Lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+            <h5 class="my-0 mr-md-auto font-weight-normal">
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/Website/remax-sj.png" Width="300px" />
+            </h5>
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-dark" href="index.aspx">Home</a>
+                <a class="p-2 text-dark" href="houses.aspx">All Houses</a>
+                <a class="p-2 text-dark" href="search.aspx">Search</a>
+                <a class="p-2 text-dark" href="messages.aspx">Messages</a>
+                <asp:Label class="p-2 text-dark" ID="lblLoggedInUsername" runat="server" Font-Bold="True" Font-Italic="True"></asp:Label>
+            </nav>
+            <asp:Button class="btn btn-outline-primary ml-2" ID="btnLogin" runat="server" Text="Log In" OnClick="Login_Click" />
+            <asp:Button class="btn btn-outline-primary ml-2" ID="btnLogout" runat="server" Text="Log Out" OnClick="Logout_Click" Visible="False" />
+            <asp:Button class="btn btn-outline-primary ml-2" ID="btnRegister" runat="server" Text="Register" OnClick="Register_Click" />
+
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="container">
+            <footer class="pt-4 my-md-5 pt-md-5 border-top">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <img class="mb-2" src="/Images/Website/remax-balloon.png" alt="" width="80" height="80">
+                        <small class="d-block mb-3 text-muted">&copy; 2020-2021</small>
+                    </div>
+                    <div class="col-6 col-md">
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="#">Toronto Listings</a></li>
+                            <li><a class="text-muted" href="#">Montreal Listings</a></li>
+                            <li><a class="text-muted" href="#">Vancouver Listings</a></li>
+                            <li><a class="text-muted" href="#">Ottawa Listings</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="#">Edmonton Listings</a></li>
+                            <li><a class="text-muted" href="#">Manitoba Listings</a></li>
+                            <li><a class="text-muted" href="#">Sydney Listings</a></li>
+                            <li><a class="text-muted" href="#">Halifax Listings</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="#">Victoria Listings</a></li>
+                            <li><a class="text-muted" href="#">Quebec Listings</a></li>
+                            <li><a class="text-muted" href="#">Winnipeg Listings</a></li>
+                            <li><a class="text-muted" href="#">CapeBreton Listings</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </form>
+
+</body>
+</html>
